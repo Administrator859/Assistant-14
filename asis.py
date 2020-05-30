@@ -80,12 +80,12 @@ def respond(voice_data):
     if there_exists(["my name is"]):
         person_name = voice_data.split("is")[-1].strip()
         engine_speak("okay, i will remember that " + person_name)
-        person_obj.setName(person_name) # remember name in person object
+        person_obj.setName(person_name)
     
     if there_exists(["your name should be"]):
         asis_name = voice_data.split("be")[-1].strip()
         engine_speak("okay, i will remember that my name is " + asis_name)
-        asis_obj.setName(asis_name) # remember name in asis object
+        asis_obj.setName(asis_name)
 
     if there_exists(["how are you","how are you doing"]):
         engine_speak("I'm very well, thanks for asking " + person_obj.name)
@@ -117,12 +117,6 @@ def respond(voice_data):
         url = "https://google.com/search?q=" + search_term
         webbrowser.get().open(url)
         engine_speak("Here is what I found for " + search_term + " on google")
-    
-
-
-    if there_exists(["show my time table"]):
-        im = Image.open(r"D:\WhatsApp Image 2019-12-26 at 10.51.10 AM.jpeg")
-        im.show()
     
     if there_exists(["weather"]):
         search_term = voice_data.split("for")[-1]
@@ -209,12 +203,12 @@ time.sleep(1)
 
 person_obj = person()
 asis_obj = asis()
-asis_obj.name = 'kiki'
+asis_obj.name = 'Admin'
 engine = pyttsx3.init()
 
 
 while(1):
     voice_data = record_audio("Recording") 
     print("Done")
-    print("Q:", voice_data)
+    print("UwU:", voice_data)
     respond(voice_data)
