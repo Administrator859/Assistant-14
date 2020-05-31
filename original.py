@@ -1,4 +1,4 @@
-import  speech_recognition as sr
+import speech_recognition as sr
 import webbrowser
 import time
 import playsound
@@ -39,7 +39,7 @@ def respond(voice_data):
 	if 'what time is it' in voice_data:
 		admin_speak(ctime())
 	if 'search' in voice_data:
-		search = record_audio('What do you wnt to search for?') 
+		search = record_audio('What do you want to search for?') 
 		url = 'https://google.com/search?q=' + search
 		webbrowser.get().open(url)
 		admin_speak('Here is what I found for ' + search)
