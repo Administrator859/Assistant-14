@@ -23,7 +23,7 @@ You can add other commands, but these are the ones that exist
 - Find Location
 - Exit
 
-Notes:
+Note:
 
 Download pyaudio here 
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
